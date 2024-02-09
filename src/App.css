@@ -1,38 +1,296 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Bebas Neue', sans-serif;
+    scroll-behavior: smooth;
+}
+.back{
+    background-image: url('./img/circle-scatter-haikei.svg');
+    width: 100%;
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main{
+    padding: 10rem;
+    color: white;
+}
+.main h1{
+    font-size: 100px;
+}
+.glow{
+    font-size: 80px;
+    transition: 0.3s ease-in-out;
+}
+.glow:hover{
+    font-size: 100px;
+    color: #fbae3c;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.pro{
+    padding: 10rem;
+    transition: transform 0.3s;
+}
+.pro:hover{
+    transform: scale(.5);
+}
+@media (max-width:880px) {
+    .main{
+        padding: 5rem;
+    }
+}
+@media (max-width:480px) {
+    .main{
+        padding: 2rem;
+    }
+}
+@media (max-width:480px) {
+    .pro{
+        padding: 2rem;
+    }
+}
+@media (max-width:880px) {
+    .pro{
+        padding: 2rem;
+        margin-top: 5rem;
+    }
+}
+.back2{
+    background-image: url('./img/blob-haikei.svg');
+    width: 100%;
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.mern{
+    text-align: left;
+    padding: 5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.mern p{
+    color: white;
+    font-size: 40px;
+    transition: 0.3s ease-in-out;
+}
+@media (max-width:480px) {
+    .mern p{
+        font-size: 20px;
+    }
+}
+@media (max-width:480px) {
+    .mern {
+        padding: 2rem;
+        margin-top: 50px;
+    }
+}
+.tech{
+    padding: 2rem; 
+    display: flex;
+    justify-content: center;  
+}
+.tech img{
+    transition: transform .3s;
+}
+.tech img:hover{
+    transform: scale(.6);
+}
+
+.main h1 {
+    border-right: solid 3px #fbae3c;
+    white-space: nowrap;
+    overflow: hidden;    
+    font-size: 100px;
+    color: white;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  /* Animation */
+  .main h1 {
+    animation: animated-text 4s steps(20,end) infinite,
+               animated-cursor 600ms steps(20,end) infinite;
   }
-  to {
-    transform: rotate(360deg);
+  
+  /* text animation */
+  
+  @keyframes animated-text{
+    from{width: 0;}
+    to{width: 350px;}
   }
+  
+  /* cursor animations */
+  
+  @keyframes animated-cursor{
+    from{border-right-color: #fbae3c;}
+    to{border-right-color: transparent;}
+  }
+
+  .back3{
+    background-image: url('./img/circle-scatter-haikei.svg');
+    width: 100%;
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2rem;
+}
+ .box1{
+    max-width: 300px;
+    padding: 30px 20px;
+    background:transparent;
+    border: 5px solid rgb(255, 255, 255,.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 15px rgb(0, 0,0,.5);
+    border-radius: 20px;
+    text-align: center;
+ }
+ .box1 img{
+    width: 40%;
+    transition: transform .1s;
+ }
+ .box1 img:hover{
+    transform: scale(.5);
+ }
+ .box1:hover{
+    box-shadow: 0px 0px 20px #fbae3c;
+ }
+ .box1 h4{
+    color: white;
+    font-size: 22px;
+    padding: 10px 0;
+ }
+
+ @media (max-width:480px) {
+    .back3{
+        padding: 2rem;
+    }
+ }
+
+  
+  .container .card {
+    max-width : 300px;
+    height : 215px;  
+    background:transparent;
+    border: 5px solid rgb(255, 255, 255,.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 15px rgb(0, 0,0,.5);    
+    margin : 30px 10px;
+    padding : 20px 15px;
+    display : flex;
+    flex-direction : column;
+    box-shadow : 0 5px 20px rgba(0,0,0,0.5);
+    transition : 0.3s ease-in-out;
+    border-radius : 15px;
+  }
+  .container .card:hover {
+    height : 300px;    
+  }
+  .container .card .image {
+    position : relative;
+    width : 260px;
+    height : 350px;
+    top : -40%;
+    left: 1px;
+    box-shadow : 0 5px 20px rgba(0,0,0,0.2);
+    z-index : 1;
+  }
+  
+  .container .card .image img {
+    max-width : 100%;
+    border-radius : 15px;
+  }
+  
+  .container .card .content {
+    position : relative;
+    top : -120px;
+    padding : 10px 15px;
+    color : #fff;
+    text-align : center;
+    visibility : hidden;
+    opacity : 0;
+    transition : 0.3s ease-in-out;
+      
+  }
+  
+  .container .card:hover .content {
+     margin-top : 30px;
+     visibility : visible;
+     opacity : 1;
+     transition-delay: 0.2s; 
+  }
+  .get{
+    background-color: white;
+    width: 150px;
+    height: 25px;
+    border: 2px solid white;
+    border-radius: 20px;
+    color: #001220;
+  }
+  .back4{
+    background-image: url('./img/blob-haikei.svg');
+    width: 100%;
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2rem;
+  }
+.grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    place-content: center;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+@media (max-width:1024px) {
+    .grid{
+        grid-template-columns: auto auto;
+    }
+}
+@media (max-width:480px) {
+    .grid{
+        grid-template-columns: auto;
+        padding: -5rem;
+    }
+}
+
+.back5{
+    background-image: url('./img/circle-scatter-haikei.svg');
+    width: 100%;
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5rem;
+}
+.contactbox{
+    max-width: 500px;
+    padding: 30px 20px;
+    background:transparent;
+    border: 5px solid rgb(255, 255, 255,.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 15px rgb(0, 0,0,.5);
+    border-radius: 20px;
+}
+.contactbox input{
+    width: 100%;
+    margin: 1rem 0;
+    background:transparent;
+    border: 2px solid rgb(255, 255, 255,.2);
+    border-radius: 10px;
+    padding: .5rem;
+}
+.contactbox h2{
+    text-align: center;
+    color: #fff;
+}
+.contactbox input:focus{
+    color: #fff;
+}
+.contactbox input:nth-child(4){
+    height: 300px;
 }
