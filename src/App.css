@@ -8,13 +8,16 @@
     font-family: 'Bebas Neue', sans-serif;
     scroll-behavior: smooth;
 }
+body{
+    margin: 0;
+}
 .back{
     background-image: url('./img/circle-scatter-haikei.svg');
     width: 100%;
     height: auto;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
 }
 .main{
     padding: 10rem;
@@ -35,6 +38,11 @@
 .pro{
     padding: 10rem;
     transition: transform 0.3s;
+}
+@media (max-width:480px) {
+    .pro{
+        padding: 2rem;
+    }
 }
 .pro:hover{
     transform: scale(.5);
@@ -213,7 +221,9 @@
     visibility : hidden;
     opacity : 0;
     transition : 0.3s ease-in-out;
-      
+  }
+  .content p{
+    font-size: .8rem;
   }
   
   .container .card:hover .content {
@@ -267,6 +277,11 @@
     background-size: cover;
     padding: 5rem;
 }
+@media (max-width:480px) {
+    .back5{
+        padding: 1rem;
+    }
+}
 .contactbox{
     max-width: 500px;
     padding: 30px 20px;
@@ -288,9 +303,20 @@
     text-align: center;
     color: #fff;
 }
-.contactbox input:focus{
+.contactbox input:focus textarea:focus{
+    color: #fff;
+}
+.contactbox input,select,textarea{
     color: #fff;
 }
 .contactbox input:nth-child(4){
-    height: 300px;
+    height: 100px;
+}
+.send{
+    background-color: white;
+    width: 100%;
+    height: 25px;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: #001220;
 }

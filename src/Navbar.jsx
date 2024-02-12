@@ -7,12 +7,12 @@ function NavScrollExample() {
   return (
     <Navbar expand="lg" className="fixed-top navbar-dark">
       <Container>
-        <Navbar.Brand href="#" style={{fontSize:'25px'}}>PORTFOLIO</Navbar.Brand>
+        <Navbar.Brand href="#" style={{fontSize:'25px',paddingLeft:'15px'}}>PORTFOLIO</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
+        <Navbar.Collapse id="responsive-navbar-nav">
           <Nav
             className="mx-auto my-5 my-lg-0"
-            style={{maxHeight: '100px',fontSize:'20px' }}
+            style={{fontSize:'20px',paddingLeft:'20px' }}
             navbarScroll
           >
             <Nav.Link href="#action1">Home</Nav.Link>
